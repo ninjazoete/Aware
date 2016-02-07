@@ -24,3 +24,7 @@ If you are afraid that app can be harmful just look at ``` scpt ``` files and ca
 ![alt text](https://github.com/ninjazoete/Aware/blob/master/Docs/Before.png)
 ## After
 ![alt text](https://github.com/ninjazoete/Aware/blob/master/Docs/After.png)
+
+## Known issues
+- When working with spaces, user is taken away to different space after focusing jetbrains IDE and has to go back there again
+- AppleScript (yuk!)
