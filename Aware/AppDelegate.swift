@@ -35,6 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Checking state in applescripts before setting fn state becasue it could be set to the same state as of now so it would be
         // a waste of time, cpu cycles and memory.
         
+        // White list of bundles for which we can't execute any change because it would close system preferences and this is not
+        // what we want.
         if  isActiveApplication(not, bundleId: Consts.SystemPrefsApplicationBundleId) ||
             isActiveApplication(not, bundleId: Consts.SystemSecurityAgentApplicationBundleId) {
             return
@@ -86,6 +88,6 @@ extension AppDelegate {
 }
 
 // Does not work but should
-//CFPreferencesSetAppValue("fnState", kCFBooleanTrue, "com.apple.keyboard");
-//CFPreferencesAppSynchronize("com.apple.keyboard");
+//CFPreferencesSetAppValue("fnState", kCFBooleanTrue, "com.apple.keyboard")
+//CFPreferencesAppSynchronize("com.apple.keyboard")
 
