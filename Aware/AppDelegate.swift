@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         static let NormalFnScriptName = "normalFn"
         static let AppleScriptExtenstion = "scpt"
         static let JetBrainsRunningApplicationPartId = "jetbrains"
+        static let SystemPrefsApplicationBundleId = "com.apple.systempreferences"
     }
     
     @IBOutlet weak var window: NSWindow!
@@ -30,19 +31,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func appActivated(not: NSNotification) -> Void {
         
-        // Checking state before setting fn state becasue it could be set to the same state as of now so it would be
+        // Checking state in applescripts before setting fn state becasue it could be set to the same state as of now so it would be
         // a waste of time, cpu cycles and memory.
         
-        if let activeApplicationBundleId = not.userInfo?[NSWorkspaceApplicationKey] as? NSRunningApplication where (activeApplicationBundleId.bundleIdentifier!.rangeOfString(Consts.JetBrainsRunningApplicationPartId) != nil)  {
-            
-            //             Execute script for jetbrains case.
+        if isActiveApplication(not, bundleId: Consts.SystemPrefsApplicationBundleId) {
+            return
+        } else if isActiveApplication(not, bundleId: Consts.JetBrainsRunningApplicationPartId) {
+            // Execute script for jetbrains case.
             self.executeAppleScript(Consts.JetBrainsFnScriptName)
-            
-            
         } else {
             
             // Execute script for normal case which for me is using f keys as media keys.
             self.executeAppleScript(Consts.NormalFnScriptName)
+        }
+    }
+    
+    func isActiveApplication(not: NSNotification, bundleId: String) -> Bool {
+        
+        if let activeApplicationBundleId = not.userInfo?[NSWorkspaceApplicationKey] as? NSRunningApplication where (activeApplicationBundleId.bundleIdentifier!.rangeOfString(bundleId) != nil) {
+                return true
+        } else {
+            return false
         }
     }
 }
@@ -75,6 +84,6 @@ extension AppDelegate {
 }
 
 // Does not work but should
-//CFPreferencesSetAppValue( CFSTR("fnState"), kCFBooleanTrue, CFSTR("com.apple.keyboard") );
-//CFPreferencesAppSynchronize( CFSTR("com.apple.keyboard") );
+//CFPreferencesSetAppValue("fnState", kCFBooleanTrue, "com.apple.keyboard");
+//CFPreferencesAppSynchronize("com.apple.keyboard");
 
