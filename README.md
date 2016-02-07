@@ -1,7 +1,7 @@
 # Aware
-## Toggling f-keys on mac os to work with JetBrains shortcuts. 
+## Automatic toggling f-keys on mac os to work with JetBrains shortcuts. 
 
-A really simple and dumb tool which I might improve in the future. The use of AppleScript was inevitable for me becasue I have wasted enough time already trying to use the CFPreferences API and defaults and failed miserably. 
+A really simple and dumb tool which I might improve in the future. It recognizes current active app and according to its bundle changes the keyboard preference for F- keys. The use of AppleScript was inevitable for me becasue I have wasted enough time already trying to use the CFPreferences API and defaults and failed miserably. 
 ``` Swift
 // Does not work but should
 CFPreferencesSetAppValue("fnState", kCFBooleanTrue, "com.apple.keyboard")
