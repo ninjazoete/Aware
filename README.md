@@ -18,7 +18,10 @@ If you know something that I have missed, please let me know :)
 ## Using Aware
 In order to use Aware, you have to let it use accessibility on your mac. 
 Go to System Preferences -> Security & Privacy -> Accessibility and check permission for Aware app to control your mac.
-If you are afraid that app can be harmful just look at ``` scpt ``` files and calm down :)
+From now on you don't have to worry about <b>Fn</b> key in JetBrains IDE, it will automatically adjust from media to IDE shortcuts. <b>Happy coding!</b>
+### Aware is aware so you don't have to be 
+
+``` If you are afraid that app can be harmful just look at scpt files and calm down :) ```
 
 ## Before
 ![alt text](https://github.com/ninjazoete/Aware/blob/master/Docs/Before.png)
