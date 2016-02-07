@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         static let AppleScriptExtenstion = "scpt"
         static let JetBrainsRunningApplicationPartId = "jetbrains"
         static let SystemPrefsApplicationBundleId = "com.apple.systempreferences"
+        static let SystemSecurityAgentApplicationBundleId = "com.apple.SecurityAgent"
     }
     
     @IBOutlet weak var window: NSWindow!
@@ -34,7 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Checking state in applescripts before setting fn state becasue it could be set to the same state as of now so it would be
         // a waste of time, cpu cycles and memory.
         
-        if isActiveApplication(not, bundleId: Consts.SystemPrefsApplicationBundleId) {
+        if  isActiveApplication(not, bundleId: Consts.SystemPrefsApplicationBundleId) ||
+            isActiveApplication(not, bundleId: Consts.SystemSecurityAgentApplicationBundleId) {
             return
         } else if isActiveApplication(not, bundleId: Consts.JetBrainsRunningApplicationPartId) {
             // Execute script for jetbrains case.
