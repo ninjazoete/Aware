@@ -9,15 +9,19 @@
 /* Begin PBXBuildFile section */
 		58EDE36A1C675848001878B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDE3691C675848001878B1 /* AppDelegate.swift */; };
 		58EDE36C1C675848001878B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58EDE36B1C675848001878B1 /* Assets.xcassets */; };
-		58EDE36F1C675848001878B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EDE36D1C675848001878B1 /* MainMenu.xib */; };
+		58EDE37B1C676D9E001878B1 /* jetBrainsFn.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 58EDE3791C676D9E001878B1 /* jetBrainsFn.scpt */; };
+		58EDE37C1C676D9E001878B1 /* normalFn.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 58EDE37A1C676D9E001878B1 /* normalFn.scpt */; };
+		58EDE37F1C6786B9001878B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EDE37D1C6786B9001878B1 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58EDE3661C675848001878B1 /* Aware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EDE3691C675848001878B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58EDE36B1C675848001878B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		58EDE36E1C675848001878B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		58EDE3701C675848001878B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58EDE3791C676D9E001878B1 /* jetBrainsFn.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = jetBrainsFn.scpt; sourceTree = SOURCE_ROOT; };
+		58EDE37A1C676D9E001878B1 /* normalFn.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = normalFn.scpt; sourceTree = SOURCE_ROOT; };
+		58EDE37E1C6786B9001878B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +54,22 @@
 		58EDE3681C675848001878B1 /* Aware */ = {
 			isa = PBXGroup;
 			children = (
+				58EDE37D1C6786B9001878B1 /* MainMenu.xib */,
+				58EDE3761C676337001878B1 /* Scripts */,
 				58EDE3691C675848001878B1 /* AppDelegate.swift */,
 				58EDE36B1C675848001878B1 /* Assets.xcassets */,
-				58EDE36D1C675848001878B1 /* MainMenu.xib */,
 				58EDE3701C675848001878B1 /* Info.plist */,
 			);
 			path = Aware;
+			sourceTree = "<group>";
+		};
+		58EDE3761C676337001878B1 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				58EDE3791C676D9E001878B1 /* jetBrainsFn.scpt */,
+				58EDE37A1C676D9E001878B1 /* normalFn.scpt */,
+			);
+			name = Scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +131,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				58EDE36C1C675848001878B1 /* Assets.xcassets in Resources */,
-				58EDE36F1C675848001878B1 /* MainMenu.xib in Resources */,
+				58EDE37B1C676D9E001878B1 /* jetBrainsFn.scpt in Resources */,
+				58EDE37C1C676D9E001878B1 /* normalFn.scpt in Resources */,
+				58EDE37F1C6786B9001878B1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,10 +151,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		58EDE36D1C675848001878B1 /* MainMenu.xib */ = {
+		58EDE37D1C6786B9001878B1 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				58EDE36E1C675848001878B1 /* Base */,
+				58EDE37E1C6786B9001878B1 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
