@@ -24,9 +24,10 @@ From now on you don't have to worry about <b>Fn</b> key in JetBrains IDE, it wil
 ``` If you are afraid that app can be harmful just look at scpt files and calm down :) ```
 
 ## Before
-![alt text](https://github.com/ninjazoete/Aware/blob/master/Docs/Before.png)
+<img src="https://github.com/ninjazoete/Aware/blob/master/Docs/Before.png" width="700">
+
 ## After
-![alt text](https://github.com/ninjazoete/Aware/blob/master/Docs/After.png)
+<img src="https://github.com/ninjazoete/Aware/blob/master/Docs/After.png" width="700">
 
 ## Known issues
 - When working with spaces, user is taken away to different space after focusing jetbrains IDE and has to go back there again
